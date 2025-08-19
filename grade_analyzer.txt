@@ -1,39 +1,47 @@
 This program has 5 functions, and the main while loop
 
-input_weather_data() function:
-•	Takes the date, temperature, humidity, and rain from the user
-•	Store the input in the weather_data.txt file to use it in different functions later
-•	Print a message to tell the user that the data has been saved
+Imput_grades() function:
+•	Takes the  student name and the student grade from the user
+•	Store the input in the grades.txt file to use it in different functions later
+•	Print a message to tell the user that the student's name and grade have been saved
 
 The user can use this function when they press 1 in the main loop 
 
-load_weather_data() function:
-•	Open the file weather_data.txt
-•	Save the file data in the lists: dates, temps, humidities, and rains
-•	Return the lists
+Load_grades() function:
+•	Open the file grades.txt
+•	Save the file data in the variable value
+•	Check for the numbers pattern to extract numbers only from the data
+•	Save it in the list of grades
+•	Return the list of grades
 
-The user can’t use this function directly, but it will be called 3 times in the functions: calculate_statistics(),  visualize_weather_data(), and display_summary() to get the grades
+The user can’t use this function directly, but it will be called 3 times in the functions: calculate_statistics(),  visualize_grades(), and display_summary() to get the grades
 
 Calculate_statistics() function:
-•	Load the data by calling the function load_weather_data()
-•	Calculate the average temperature and humidity, the highest and lowest temperatures, and how many rainy days
-•	Print the calculations
+•	Load the grades by calling the function load_grades()
+•	Calculate the sum, highest, and lowest grade with a for loop to check each element in the list
+•	Calculate the average
+•	Print the average, highest, and lowest grade
 
 The user can directly use this function when they press 2 in the main loop
 
 Visualize_grades() function:
-•	Load the data by calling the function load_weather_data()
-•	Use matplotlib to create a line chart
-•	Show the line chart
-•	Use matplotlib to create a scatter plot
-•	Show the scatter plot
+•	Load the grades by calling the function load_grades()
+•	Print the grades
+•	Open grades.txt file to read the students' names
+•	Check for the string pattern and save the names in the list names
+•	Print the names
+•	Create a histogram plot for the grades, give it a title, and labels for the x and y axes 
+•	Show the histogram
+•	Create a bar chart plot for the names and grades, give it a title and labels for the x and y axes, and a limit for the y axis
+•	Show the bar chart
 
 The user can directly use this function when they press 3 in the main loop
 
 Display_summary() function:
-•	Load the data by calling the function load_weather_data()
-•	Calculate the total number of days, average temperature, and humidity, and the hottest and coldest days
-•	Print the calculations
+•	Load the grades by calling the function load_grades()
+•	Print the number of students using the grades list
+•	Calculate the sum, pass students, and fail students using a for loop to check each element in the list
+•	Print the average, passed, and failed students
 
 The user can directly use this function when they press 4 in the main loop
 
@@ -45,6 +53,6 @@ The main while loop:
 •	If the choice is not a valid input, the user gets a message to declare it and continue the loop
 
 
-Why do we use a file to save the weather data instead of saving it in a list or dictionary in the program?
-	To save the data for later use, because as soon as the program is closed, the data will disappear.
+Why do we use a file to save the students' names and grades instead of keeping them in a list or dictionary in the program?
+	To save the data for later use, because as soon as the program is closed the data will disappear,
 And we need to save it for later use or go back to it for references. And to make the program usable for different files.
