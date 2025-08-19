@@ -1,0 +1,7 @@
+studentA: 83.0
+studentB: 96.0
+studentC: 57.5
+studentD: 60.0
+studentE: 79.5
+studentF: 60.0
+studentG: 42.5
